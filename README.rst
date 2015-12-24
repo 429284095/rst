@@ -50,14 +50,14 @@ _________________
 captcha_id ="你的公钥"
 private_key = "你的私钥"
 
-3.请求验证码时使用register_challenge()获取challenge
+#.请求验证码时使用register_challenge()获取challenge
 
 .. code-block:: python
 
 gt = geetest.GeetestLib(captcha_id, private_key)
 challenge = gt.register_challenge()
 
-4.预处理和session控制
+#.预处理和session控制
 
 .. code-block:: python
 
@@ -70,7 +70,7 @@ gt =  GeetestLib(captcha_id, private_key)
         gt.set_gtserver_session(session.__setitem__, 0)
     return res_str
 
-5.validate验证：
+#.validate验证：
 
 .. code-block:: python
 
@@ -90,7 +90,7 @@ return HttpResponse("error")
 发布日志
 _______________
 
--[3.0.1]
- -SDK库和django和flask demo重制
- -failback模式下的validate存在可能是js的bug待修复
- -2015.12.24        
++[3.0.1]
+ - SDK库和django和flask demo重制
+ - failback模式下的validate存在可能是js的bug待修复
+ - 2015.12.24        
