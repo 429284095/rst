@@ -25,7 +25,7 @@ _______________
 
     $ python manage.py runserver 0.0.0.0:8000  
 
- 在浏览器中访问http://localhost:8000即可看到Demo界面
+在浏览器中访问http://localhost:8000即可看到Demo界面
 
 3. flask demo运行：进入flask_demo文件夹，运行：
 
@@ -33,7 +33,7 @@ _______________
 
     $ python start.py
 
- 在浏览器中访问http://localhost:5000即可看到Demo界面
+在浏览器中访问http://localhost:5000即可看到Demo界面
  
 4. tornado demo运行：进入tornado_demo文件夹，运行:
 
