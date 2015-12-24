@@ -19,21 +19,21 @@ _______________
 
     $ git clone https://github.com/GeeTeam/gt-python-sdk.git
 
-2.django demo运行：进入django_demo文件夹，运行：
+2. django demo运行：进入django_demo文件夹，运行：
 
 .. code-block:: bash
 
     $ python manage.py runserver 0.0.0.0:8000  
 
-在浏览器中访问http://localhost:8000即可看到Demo界面
+ 在浏览器中访问http://localhost:8000即可看到Demo界面
 
-3.flask demo运行：进入flask_demo文件夹，运行：
+3. flask demo运行：进入flask_demo文件夹，运行：
 
 .. code-block:: bash
 
     $ python start.py
 
-在浏览器中访问http://localhost:5000即可看到Demo界面
+ 在浏览器中访问http://localhost:5000即可看到Demo界面
 
 
 SDK 使用说明
