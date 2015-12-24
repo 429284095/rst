@@ -29,7 +29,7 @@ _______________
 
 3.flask demo运行：进入flask_demo文件夹，运行：
 
-..code-block:: bash
+.. code-block:: bash
 
     $ python start.py
 
@@ -45,21 +45,21 @@ _________________
 
 2. 公钥和私钥初始化：/django_demo/app/views.py
 
-..code-block:: python
+.. code-block:: python
 
 captcha_id ="你的公钥"
 private_key = "你的私钥"
 
 3.请求验证码时使用register_challenge()获取challenge
 
-..code-block:: python
+.. code-block:: python
 
 gt = geetest.GeetestLib(captcha_id, private_key)
 challenge = gt.register_challenge()
 
 4.预处理和session控制
 
-..code-block:: python
+.. code-block:: python
 
 gt =  GeetestLib(captcha_id, private_key)
     if gt.pre_process():
@@ -72,7 +72,7 @@ gt =  GeetestLib(captcha_id, private_key)
 
 5.validate验证：
 
-..code-block:: python
+.. code-block:: python
 
 if request.method == "POST":
     challenge = request.POST.get('geetest_challenge', '')
@@ -90,7 +90,7 @@ return HttpResponse("error")
 发布日志
 _______________
 
-[3.0.1]
--SDK库和django和flask demo重制
--failback模式下的validate存在可能是js的bug待修复
--2015.12.24        
+-[3.0.1]
+ -SDK库和django和flask demo重制
+ -failback模式下的validate存在可能是js的bug待修复
+ -2015.12.24        
