@@ -50,42 +50,42 @@ _________________
  captcha_id ="你的公钥"
  private_key = "你的私钥"
 
-#. 请求验证码时使用register_challenge()获取challenge
+3. 请求验证码时使用register_challenge()获取challenge
 
 .. code-block:: python
 
  gt = geetest.GeetestLib(captcha_id, private_key)
  challenge = gt.register_challenge()
 
-#. 预处理和session控制
+4. 预处理和session控制
 
 .. code-block:: python
 
-gt =  GeetestLib(captcha_id, private_key)
-    if gt.pre_process():
-        res_str = gt.success_pre_process()
-        gt.set_gtserver_session(session.__setitem__, 1)
-    else:                   #宕机情况下提供failback方案，可自行更换
-        res_str = gt.fail_pre_process()
-        gt.set_gtserver_session(session.__setitem__, 0)
-    return res_str
+ gt =  GeetestLib(captcha_id, private_key)
+ if gt.pre_process():
+     res_str = gt.success_pre_process()
+     gt.set_gtserver_session(session.__setitem__, 1)
+ else:                   #宕机情况下提供failback方案，可自行更换
+     res_str = gt.fail_pre_process()
+     gt.set_gtserver_session(session.__setitem__, 0)
+ return res_str
 
-#. validate验证：
+5. validate验证：
 
 .. code-block:: python
 
-if request.method == "POST":
-    challenge = request.POST.get('geetest_challenge', '')
-    validate = request.POST.get('geetest_validate', '')
-    seccode = request.POST.get('geetest_seccode', '')
-    gt = geetest.GeetestLib(captcha_id, private_key)
-    gt_server_status = gt.get_gtserver_session(request.session.__getitem__)
-    if gt_server_status == 1:
-        result = gt.post_validate(challenge, validate, seccode)
-    else:
-        result = gt.failback_validate(challenge, validate, seccode)
-    return HttpResponse(result)
-return HttpResponse("error")
+ if request.method == "POST":
+     challenge = request.POST.get('geetest_challenge', '')
+     validate = request.POST.get('geetest_validate', '')
+     seccode = request.POST.get('geetest_seccode', '')
+     gt = geetest.GeetestLib(captcha_id, private_key)
+     gt_server_status = gt.get_gtserver_session(request.session.__getitem__)
+     if gt_server_status == 1:
+         result = gt.post_validate(challenge, validate, seccode)
+     else:
+         result = gt.failback_validate(challenge, validate, seccode)
+     return HttpResponse(result)
+ return HttpResponse("error")
 
 发布日志
 _______________
