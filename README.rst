@@ -47,17 +47,17 @@ _________________
 
 .. code-block:: python
 
-captcha_id ="你的公钥"
-private_key = "你的私钥"
+ captcha_id ="你的公钥"
+ private_key = "你的私钥"
 
-#.请求验证码时使用register_challenge()获取challenge
+#. 请求验证码时使用register_challenge()获取challenge
 
 .. code-block:: python
 
-gt = geetest.GeetestLib(captcha_id, private_key)
-challenge = gt.register_challenge()
+ gt = geetest.GeetestLib(captcha_id, private_key)
+ challenge = gt.register_challenge()
 
-#.预处理和session控制
+#. 预处理和session控制
 
 .. code-block:: python
 
@@ -70,7 +70,7 @@ gt =  GeetestLib(captcha_id, private_key)
         gt.set_gtserver_session(session.__setitem__, 0)
     return res_str
 
-#.validate验证：
+#. validate验证：
 
 .. code-block:: python
 
