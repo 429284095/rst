@@ -34,6 +34,14 @@ _______________
     $ python start.py
 
  在浏览器中访问http://localhost:5000即可看到Demo界面
+ 
+4. tornado demo运行：进入tornado_demo文件夹，运行:
+
+.. code-block:: bash
+
+    $ python app.py
+
+在浏览器中访问http://localhost:8088即可看到Demo界面
 
 
 SDK 使用说明
